@@ -8,7 +8,8 @@ const routes: RouteRecordRaw[] = [
       { path: '', component: () => import('pages/IndexPage.vue') },
       { path: '/login', component: () => import('pages/Auth/LoginPage.vue') },
       // requiresAuth: el guard del router (router/index.ts) exige sesion iniciada
-      // Las rutas de cada entidad se agregan a medida que se completan sus CRUD (Fases 5 y 6)
+      { path: '/categorias', component: () => import('pages/Categoria/CategoriasPage.vue'), meta: { requiresAuth: true } },
+      // Las rutas del resto de las entidades se agregan a medida que se completan sus CRUD (Fases 5 y 6)
     ],
   },
 
